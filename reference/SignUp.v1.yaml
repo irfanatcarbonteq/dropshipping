@@ -1,0 +1,54 @@
+openapi: 3.0.0
+info:
+  title: SignUp
+  version: '1.0'
+  contact:
+    name: 'Irfan '
+    email: irfan@carbonteq.com
+  description: For creating account
+servers:
+  - url: 'http://localhost:3000'
+    description: localhost
+paths:
+  /api/v1/signup:
+    get:
+      summary: Your GET endpoint
+      tags: []
+      responses: {}
+      operationId: get-api-v1-signup
+    post:
+      summary: ''
+      operationId: post-api-v1-signup
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  email:
+                    type: string
+                  password:
+                    type: string
+                  confirmPassword:
+                    type: string
+                  firstName:
+                    type: string
+                  LastName:
+                    type: string
+                  phoneNumber:
+                    type: number
+      description: 'Send email,password,confirmPassword,firstName,lastLast and phoneNumber in request body'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: string
+          application/xml:
+            schema:
+              type: object
+              properties: {}
+        description: ''
+components:
+  schemas: {}

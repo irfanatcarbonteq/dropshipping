@@ -14,17 +14,17 @@
     "updatedAt": {
       "type": "string"
     },
-    "stripeToken": {
-      "type": "string"
-    },
-    "freeTrialExpired": {
+    "trialExpired": {
       "type": "boolean",
       "default": "false",
       "description": "by default set it to false"
+    },
+    "stripeToken": {
+      "type": "string"
     }
   },
   "required": [
     "planId",
-    "freeTrialExpired"
+    "trialExpired"
   ]
 }
