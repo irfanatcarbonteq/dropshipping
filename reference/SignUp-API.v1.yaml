@@ -12,7 +12,7 @@ servers:
 paths:
   /api/v1/signup:
     post:
-      summary: ''
+      summary: Account Creation
       operationId: post-api-v1-signup
       responses:
         '200':

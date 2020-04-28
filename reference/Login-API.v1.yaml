@@ -7,13 +7,8 @@ servers:
     description: localhost
 paths:
   /api/v1/login:
-    get:
-      summary: Your GET endpoint
-      tags: []
-      responses: {}
-      operationId: get-api-v1-login
     post:
-      summary: ''
+      summary: Login
       operationId: post-api-v1-login
       responses:
         '200':
