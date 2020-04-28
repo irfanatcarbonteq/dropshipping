@@ -1,0 +1,67 @@
+openapi: 3.0.0
+info:
+  title: SignUp API
+  version: '1.0'
+  description: 'SignUp api for creating account , basic information including email and password'
+  contact:
+    name: Irfan Shahzad
+    email: irfan@carbonteq.com
+servers:
+  - url: 'http://localhost:3000'
+paths:
+  /api/v1/signup:
+    get:
+      summary: Your GET endpoint
+      tags: []
+      responses: {}
+      operationId: get-api-v1-signup
+    post:
+      summary: ''
+      operationId: post-api-v1-signup
+      responses:
+        '200':
+          description: OK
+        '400':
+          description: Bad Request
+        '403':
+          description: Forbidden
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                FirstName:
+                  type: string
+                LastName:
+                  type: string
+                Email:
+                  type: string
+                Password:
+                  type: string
+                ConfirmPassword:
+                  type: string
+                PhoneNumber:
+                  type: string
+        description: ''
+components:
+  schemas:
+    User:
+      title: User
+      type: object
+      properties:
+        id:
+          type: integer
+        Email:
+          type: string
+        Password:
+          type: string
+        ConfirmPassword:
+          type: string
+        FirstName:
+          type: string
+        LastName:
+          type: string
+        PhoneNumber:
+          type: string
+      description: ''
