@@ -11,44 +11,33 @@ servers:
     description: localhost
 paths:
   /api/v1/signup:
-    get:
-      summary: Your GET endpoint
-      tags: []
-      responses: {}
-      operationId: get-api-v1-signup
     post:
       summary: ''
       operationId: post-api-v1-signup
       responses:
         '200':
           description: OK
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  email:
-                    type: string
-                  password:
-                    type: string
-                  confirmPassword:
-                    type: string
-                  firstName:
-                    type: string
-                  LastName:
-                    type: string
-                  phoneNumber:
-                    type: number
-      description: 'Send email,password,confirmPassword,firstName,lastLast and phoneNumber in request body'
       requestBody:
         content:
           application/json:
             schema:
-              type: string
-          application/xml:
-            schema:
               type: object
-              properties: {}
-        description: ''
+              properties:
+                email:
+                  type: string
+                password:
+                  type: string
+                confirmPassword:
+                  type: string
+                firstName:
+                  type: string
+                lastName:
+                  type: string
+                phoneNumber:
+                  type: number
+              required:
+                - email
+                - password
+                - confirmPassword
 components:
   schemas: {}
