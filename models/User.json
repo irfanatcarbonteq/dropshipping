@@ -29,8 +29,14 @@
     "amazonMwsAuthToken": {
       "type": "string"
     },
-    "planId": {
-      "$ref": "./User.json"
+    "createdAt": {
+      "type": "string"
+    },
+    "updatedAt": {
+      "type": "string"
+    },
+    "subscriptionId": {
+      "$ref": "./Subscription.json"
     }
   },
   "required": [
@@ -39,7 +45,6 @@
     "password",
     "confirmPassword",
     "amazonSellerId",
-    "amazonMwsAuthToken",
-    "planId"
+    "amazonMwsAuthToken"
   ]
 }

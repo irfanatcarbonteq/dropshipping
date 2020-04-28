@@ -10,6 +10,17 @@
     },
     "price": {
       "type": "number"
+    },
+    "createdAt": {
+      "type": "string"
+    },
+    "updatedAt": {
+      "type": "string"
     }
-  }
+  },
+  "required": [
+    "id",
+    "name",
+    "price"
+  ]
 }

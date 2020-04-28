@@ -1,0 +1,30 @@
+{
+  "title": "Subscription",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer"
+    },
+    "planId": {
+      "$ref": "./Plan.json"
+    },
+    "createdAt": {
+      "type": "string"
+    },
+    "updatedAt": {
+      "type": "string"
+    },
+    "stripeToken": {
+      "type": "string"
+    },
+    "freeTrialExpired": {
+      "type": "boolean",
+      "default": "false",
+      "description": "by default set it to false"
+    }
+  },
+  "required": [
+    "planId",
+    "freeTrialExpired"
+  ]
+}
