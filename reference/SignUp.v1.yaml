@@ -49,5 +49,6 @@ paths:
                 - password
                 - confirmPassword
         description: 'Send email , password , confirmConfirm , firstName, lastName and phoneNumber in request body'
+      description: Endpoint for User Registration
 components:
   schemas: {}
