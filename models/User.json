@@ -1,0 +1,36 @@
+{
+  "title": "User",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer"
+    },
+    "email": {
+      "type": "string"
+    },
+    "password": {
+      "type": "string"
+    },
+    "confirm_password": {
+      "type": "string"
+    },
+    "first_name": {
+      "type": "string"
+    },
+    "last_name": {
+      "type": "string"
+    },
+    "phone_number": {
+      "type": "string"
+    },
+    "amazon_seller_id": {
+      "type": "string"
+    },
+    "amazon_mws_auth_token": {
+      "type": "string"
+    },
+    "plan_id": {
+      "type": "string"
+    }
+  }
+}
