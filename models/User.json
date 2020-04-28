@@ -11,26 +11,35 @@
     "password": {
       "type": "string"
     },
-    "confirm_password": {
+    "confirmPassword": {
       "type": "string"
     },
-    "first_name": {
+    "firstName": {
       "type": "string"
     },
-    "last_name": {
+    "lastName": {
       "type": "string"
     },
-    "phone_number": {
+    "phoneNumber": {
       "type": "string"
     },
-    "amazon_seller_id": {
+    "amazonSellerId": {
       "type": "string"
     },
-    "amazon_mws_auth_token": {
+    "amazonMwsAuthToken": {
       "type": "string"
     },
-    "plan_id": {
-      "type": "string"
+    "planId": {
+      "$ref": "./User.json"
     }
-  }
+  },
+  "required": [
+    "id",
+    "email",
+    "password",
+    "confirmPassword",
+    "amazonSellerId",
+    "amazonMwsAuthToken",
+    "planId"
+  ]
 }
