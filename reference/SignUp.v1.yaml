@@ -17,6 +17,15 @@ paths:
       responses:
         '200':
           description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: number
+                  message:
+                    type: string
       requestBody:
         content:
           application/json:
@@ -39,5 +48,6 @@ paths:
                 - email
                 - password
                 - confirmPassword
+        description: 'Send email , password , confirmConfirm , firstName, lastName and phoneNumber in request body'
 components:
   schemas: {}
