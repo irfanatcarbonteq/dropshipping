@@ -1,54 +1,85 @@
-openapi: 3.0.0
-info:
-  title: SignUp
-  version: '1.0'
-  contact:
-    name: 'Irfan '
-    email: irfan@carbonteq.com
-  description: For creating account
-servers:
-  - url: 'http://localhost:3000'
-    description: localhost
-paths:
-  /api/v1/signup:
-    post:
-      summary: Account Creation
-      operationId: post-api-v1-signup
-      responses:
-        '200':
-          description: OK
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  code:
-                    type: number
-                  message:
-                    type: string
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                email:
-                  type: string
-                password:
-                  type: string
-                confirmPassword:
-                  type: string
-                firstName:
-                  type: string
-                lastName:
-                  type: string
-                phoneNumber:
-                  type: number
-              required:
-                - email
-                - password
-                - confirmPassword
-        description: 'Send email , password , confirmConfirm , firstName, lastName and phoneNumber in request body'
-      description: Endpoint for User Registration
-components:
-  schemas: {}
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "SignUp",
+    "version": "1.0",
+    "contact": {
+      "name": "Irfan ",
+      "email": "irfan@carbonteq.com"
+    },
+    "description": "For creating account"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000",
+      "description": "localhost"
+    }
+  ],
+  "paths": {
+    "/api/v1/signup": {
+      "post": {
+        "summary": "Account Creation",
+        "operationId": "post-api-v1-signup",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "code": {
+                      "type": "number"
+                    },
+                    "message": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "email": {
+                    "type": "string"
+                  },
+                  "password": {
+                    "type": "string"
+                  },
+                  "confirmPassword": {
+                    "type": "string"
+                  },
+                  "firstName": {
+                    "type": "string"
+                  },
+                  "lastName": {
+                    "type": "string"
+                  },
+                  "phoneNumber": {
+                    "type": "number"
+                  }
+                },
+                "required": [
+                  "email",
+                  "password",
+                  "confirmPassword"
+                ]
+              }
+            }
+          },
+          "description": "Send email , password , confirmConfirm , firstName, lastName and phoneNumber in request body"
+        },
+        "description": "Endpoint for User Registration"
+      }
+    }
+  },
+  "components": {
+    "schemas": {}
+  }
+}
