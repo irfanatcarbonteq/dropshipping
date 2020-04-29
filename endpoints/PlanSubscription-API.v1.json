@@ -2,7 +2,8 @@
   "openapi": "3.0.0",
   "info": {
     "title": "Subscribe to a plan",
-    "version": "1.0"
+    "version": "1.0",
+    "description": "More details will be added to this api when we will decide which payment gateway we are going to use"
   },
   "servers": [
     {
