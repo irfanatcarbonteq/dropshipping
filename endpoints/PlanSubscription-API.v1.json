@@ -47,7 +47,9 @@
   "components": {
     "securitySchemes": {
       "Authorization": {
-        "type": "oauth2"
+        "name": "API Key",
+        "type": "apiKey",
+        "in": "query"
       }
     }
   }
