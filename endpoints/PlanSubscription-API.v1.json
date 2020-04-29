@@ -1,0 +1,54 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Subscribe to a plan",
+    "version": "1.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000",
+      "description": "localhost"
+    }
+  ],
+  "paths": {
+    "/api/v1/subcribe": {
+      "get": {
+        "summary": "Subsribe to a plan",
+        "tags": [],
+        "responses": {},
+        "operationId": "get-api-v1-subcribe"
+      },
+      "post": {
+        "summary": "",
+        "operationId": "post-api-v1-subcribe",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "description": "Send plan_id in request body",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "plan_id": {
+                    "type": "integer"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "Authorization": {
+        "type": "oauth2"
+      }
+    }
+  }
+}

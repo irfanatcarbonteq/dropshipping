@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "title": "Login API",
+    "title": "UpdateProfile-API",
     "version": "1.0"
   },
   "servers": [
@@ -11,34 +11,13 @@
     }
   ],
   "paths": {
-    "/api/v1/login": {
-      "post": {
-        "summary": "Login Authentication",
-        "operationId": "post-api-v1-login",
+    "/api/v1/users": {
+      "put": {
+        "summary": "",
+        "operationId": "put-api-v1-users",
         "responses": {
           "200": {
             "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "code": {
-                      "type": "string"
-                    },
-                    "message": {
-                      "type": "string"
-                    },
-                    "token": {
-                      "type": "string"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
             "content": {
               "application/json": {
                 "schema": {
@@ -53,29 +32,38 @@
             }
           }
         },
-        "description": "Endpoint for login",
+        "description": "Update firstName,LastName,phoneNumber of user",
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
                 "type": "object",
                 "properties": {
-                  "email": {
+                  "firstName": {
                     "type": "string"
                   },
-                  "password": {
+                  "lastName": {
+                    "type": "string"
+                  },
+                  "phoneNumber": {
                     "type": "string"
                   }
                 }
               }
             }
-          },
-          "description": "Send email and password parameters in request body"
-        }
+          }
+        },
+        "parameters": []
       }
     }
   },
   "components": {
-    "schemas": {}
+    "securitySchemes": {
+      "Authorizarion": {
+        "name": "token",
+        "type": "apiKey",
+        "in": "query"
+      }
+    }
   }
 }
