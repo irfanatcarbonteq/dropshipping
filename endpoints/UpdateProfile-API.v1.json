@@ -2,7 +2,8 @@
   "openapi": "3.0.0",
   "info": {
     "title": "UpdateProfile-API",
-    "version": "1.0"
+    "version": "1.0",
+    "description": "To use this api send JWT in header with Authorization as key."
   },
   "servers": [
     {
@@ -13,7 +14,7 @@
   "paths": {
     "/api/v1/users": {
       "put": {
-        "summary": "",
+        "summary": "Update Profile",
         "operationId": "put-api-v1-users",
         "responses": {
           "200": {
@@ -27,12 +28,56 @@
                       "type": "string"
                     }
                   }
+                },
+                "examples": {
+                  "Updated Successfully": {
+                    "value": {
+                      "message": "Profile is updated successfully."
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity (WebDAV)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "examples": {
+                  "Email is already taken ": {
+                    "value": {
+                      "error": "Email is already taken."
+                    }
+                  },
+                  "Password Mismatch": {
+                    "value": {
+                      "error": "Password and Confirm Password do not match"
+                    }
+                  },
+                  "AmazonSellerId can not be empty": {
+                    "value": {
+                      "error": "Amazon Seller Id can not be empty."
+                    }
+                  },
+                  "Amazon MWS auth token can not be empty": {
+                    "value": {
+                      "error": "Amazon MWS auth token can not be empty."
+                    }
+                  }
                 }
               }
             }
           }
         },
-        "description": "Update firstName,LastName,phoneNumber ,amazonSellerId and amazonMWSAuthToken",
+        "description": "Update firstName,LastName,phoneNumber,password,confirmPassword ,amazonSellerId and amazonMWSAuthToken",
         "requestBody": {
           "content": {
             "application/json": {
@@ -53,13 +98,30 @@
                   },
                   "amazonMWSAuthToken": {
                     "type": "string"
+                  },
+                  "email": {
+                    "type": "string"
+                  },
+                  "password": {
+                    "type": "string"
+                  },
+                  "confirmPassword": {
+                    "type": "string"
                   }
                 }
               }
             }
-          }
+          },
+          "description": "User will send firstName,LastName,phoneNumber,password,confirmPassword , amazonSellerId,amazonMWSAuthToken parameters in PUT request and this api will update user fields and after successfully updation will send success message along with success code . If any error occurs during this operation will send error message along with Error code.  "
         },
-        "parameters": []
+        "parameters": [
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "header"
+          }
+        ]
       }
     }
   },
@@ -68,7 +130,7 @@
       "Authorizarion": {
         "name": "token",
         "type": "apiKey",
-        "in": "query"
+        "in": "header"
       }
     }
   }
