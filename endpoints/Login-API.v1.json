@@ -59,6 +59,11 @@
                     "value": {
                       "error": "Invalid Email or Password."
                     }
+                  },
+                  "Trial Period Is Over": {
+                    "value": {
+                      "error": "Your trial period is over."
+                    }
                   }
                 }
               }
