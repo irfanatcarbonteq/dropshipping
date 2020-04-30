@@ -104,7 +104,7 @@
               }
             }
           },
-          "description": "User will send email , password , confirmConfirm , firstName, lastName and phoneNumber in post request . If user is created successfully then this api will send success message with success code otherwise will send error message with error code"
+          "description": "User will send email , password , confirmConfirm , firstName, lastName and phoneNumber in post request . If user is created successfully then this endpoint will send success message with success code otherwise will send error message with error code"
         },
         "description": "Endpoint for Account Creation"
       }

@@ -82,7 +82,7 @@
               }
             }
           },
-          "description": "User will send email and password parameters in post request. After users authentication this api will send JWT in response and if user's authentication fails this api will send error message."
+          "description": "User will send email and password parameters in post request. After users authentication this endpoint will send JWT in response and if user's authentication fails this endpoint will send error message."
         }
       }
     }
