@@ -13,7 +13,7 @@
   "paths": {
     "/api/v1/login": {
       "post": {
-        "summary": "Login Authentication",
+        "summary": "User's  Authentication",
         "operationId": "post-api-v1-login",
         "responses": {
           "200": {
@@ -23,9 +23,6 @@
                 "schema": {
                   "type": "object",
                   "properties": {
-                    "code": {
-                      "type": "string"
-                    },
                     "message": {
                       "type": "string"
                     },
@@ -33,19 +30,34 @@
                       "type": "string"
                     }
                   }
+                },
+                "examples": {
+                  "Login Successfully": {
+                    "value": {
+                      "message": "Login Successfully.",
+                      "token": "xxxxx.yyyyy.zzzzz"
+                    }
+                  }
                 }
               }
             }
           },
-          "403": {
-            "description": "Forbidden",
+          "422": {
+            "description": "Unprocessable Entity (WebDAV)",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "object",
                   "properties": {
-                    "message": {
+                    "error": {
                       "type": "string"
+                    }
+                  }
+                },
+                "examples": {
+                  "Invalid Email Or Password": {
+                    "value": {
+                      "error": "Invalid Email or Password."
                     }
                   }
                 }
@@ -53,7 +65,7 @@
             }
           }
         },
-        "description": "Endpoint for login",
+        "description": "Endpoint for user's authentication",
         "requestBody": {
           "content": {
             "application/json": {
@@ -70,7 +82,7 @@
               }
             }
           },
-          "description": "Send email and password parameters in request body"
+          "description": "User will send email and password parameters in post request. After users authentication this api will send JWT in response and if user's authentication fails this api will send error message."
         }
       }
     }

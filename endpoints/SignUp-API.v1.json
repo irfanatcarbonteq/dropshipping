@@ -7,7 +7,7 @@
       "name": "Irfan ",
       "email": "irfan@carbonteq.com"
     },
-    "description": "For creating account"
+    "description": "Account Creation"
   },
   "servers": [
     {
@@ -104,7 +104,7 @@
               }
             }
           },
-          "description": "Send email , password , confirmConfirm , firstName, lastName and phoneNumber in request body"
+          "description": "User will send email , password , confirmConfirm , firstName, lastName and phoneNumber in post request . If user is created successfully then this api will send success message with success code otherwise will send error message with error code"
         },
         "description": "Endpoint for Account Creation"
       }
