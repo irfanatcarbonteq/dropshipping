@@ -32,7 +32,7 @@
             }
           }
         },
-        "description": "Update firstName,LastName,phoneNumber of user",
+        "description": "Update firstName,LastName,phoneNumber ,amazonSellerId and amazonMWSAuthToken",
         "requestBody": {
           "content": {
             "application/json": {
@@ -46,6 +46,12 @@
                     "type": "string"
                   },
                   "phoneNumber": {
+                    "type": "string"
+                  },
+                  "amazonSellerId": {
+                    "type": "string"
+                  },
+                  "amazonMWSAuthToken": {
                     "type": "string"
                   }
                 }

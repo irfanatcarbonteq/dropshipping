@@ -28,11 +28,42 @@
                 "schema": {
                   "type": "object",
                   "properties": {
-                    "code": {
-                      "type": "number"
-                    },
                     "message": {
                       "type": "string"
+                    }
+                  }
+                },
+                "examples": {
+                  "SignUp Successfully": {
+                    "value": {
+                      "message": "User is created successfully."
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity (WebDAV)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "examples": {
+                  "Email is Already taken": {
+                    "value": {
+                      "error": "Email is already taken"
+                    }
+                  },
+                  "Password Mismatch": {
+                    "value": {
+                      "error": "Your password and confirm password do not match"
                     }
                   }
                 }
@@ -75,7 +106,7 @@
           },
           "description": "Send email , password , confirmConfirm , firstName, lastName and phoneNumber in request body"
         },
-        "description": "Endpoint for User Registration"
+        "description": "Endpoint for Account Creation"
       }
     }
   },
