@@ -16,8 +16,41 @@
       "get": {
         "summary": "Subsribe to a plan",
         "tags": [],
-        "responses": {},
-        "operationId": "get-api-v1-subcribe"
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "examples": {
+                  "Subscribe To Plan Successfully": {
+                    "value": {
+                      "message": "Subcscribe to plan Successfully."
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-api-v1-subcribe",
+        "parameters": [
+          {
+            "schema": {
+              "type": "integer"
+            },
+            "in": "query",
+            "name": "planId"
+          }
+        ],
+        "description": ""
       },
       "post": {
         "summary": "",

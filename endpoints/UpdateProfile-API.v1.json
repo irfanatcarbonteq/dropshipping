@@ -71,6 +71,11 @@
                     "value": {
                       "error": "Amazon MWS auth token can not be empty."
                     }
+                  },
+                  "Invalid JWT Token": {
+                    "value": {
+                      "error": "Invalid JWT token"
+                    }
                   }
                 }
               }
